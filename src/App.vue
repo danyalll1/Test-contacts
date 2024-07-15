@@ -40,7 +40,7 @@ onMounted(async () => {
   if (localStorage.getItem('contacts')) {
     contactsList.value = JSON.parse(localStorage.getItem('contacts') || '[]') as IContact[]; // Парсим и типизируем
   } else {
-    fetch('src/assets/data.json')
+    fetch('data.json')
         .then((response) => response.json())
         .then((json) => {
               contactsList.value = json
